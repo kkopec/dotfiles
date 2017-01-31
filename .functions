@@ -1,0 +1,25 @@
+# creates directory and enters it
+function mkcd_func() {
+   mkdir "$@" || return
+   shift "$(( $# - 1 ))"
+   cd -- "$1"
+}
+
+# changes cwd and lists its content
+function cdls() {
+    cd "$@" && ls;
+}
+
+# vi-mode indicator
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPROMPT='${return_code} ${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} %D{%H:%M:%S}'
+    zle reset-prompt
+}
+
+# copnnects with overthewire wargame
+# param1 game_name
+# param2 game_number
+function overthewire() {
+    ssh "$1$2"@"$1".labs.overthewire.org
+}

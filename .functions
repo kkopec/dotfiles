@@ -17,9 +17,9 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
-# copnnects with overthewire wargame
+# connects with overthewire wargame
 # param1 game_name
-# param2 game_number
+# param2 level_number
 function overthewire() {
     ssh "$1$2"@"$1".labs.overthewire.org
 }

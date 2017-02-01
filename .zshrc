@@ -2,7 +2,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/kkopec/.oh-my-zsh
 
 # theme
-ZSH_THEME="afowler2"
+ZSH_THEME="afowler2-custom"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
 DISABLE_AUTO_UPDATE="true"

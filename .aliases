@@ -8,6 +8,7 @@ alias repo="cd ~/repo"
 alias grepd='~/.scripts/grepd.sh $@'
 alias cdf='. ~/.scripts/cdf.sh "$@"'
 alias cdfs='. ~/.scripts/cdf.sh ~ "$@"'
+alias uni='python ~/.scripts/uniesc$PYV.py "$@"'
 
 # @see .functions
 alias mkcd=mkcd_func

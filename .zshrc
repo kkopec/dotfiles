@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/kkopec/.oh-my-zsh
+export PYV=$(python -c 'import sys; print(sys.version_info[0])')
 
 # theme
 ZSH_THEME="afowler2-custom"

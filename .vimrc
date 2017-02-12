@@ -7,6 +7,7 @@ set incsearch
 set joinspaces
 set laststatus=2
 set mouse=a
+set noshowmode
 set nobackup nowritebackup noswapfile
 set number
 set showcmd
@@ -20,6 +21,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-surround'
+    Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
  
  "APPEARANCE
     Plug 'itchyny/lightline.vim'
@@ -44,8 +46,15 @@ map <F4> :NERDTreeToggle<CR>
 
 
 "APPEARANCE
+    if !has('gui_running')
+        set t_Co=256
+    endif
+
     "colorscheme
     colorscheme darcula
+    let g:lightline = {
+        \ 'colorscheme': 'darcula'
+        \ }
 
     "transparency
     "highlight Normal ctermbg=none

@@ -1,4 +1,3 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
 # theme
@@ -11,14 +10,15 @@ plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export KEYTIMEOUT=1
 export EDITOR='vim'
-export TERM=xterm-256color
+export KEYTIMEOUT=1
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PYV=$(python -c 'import sys; print(sys.version_info[0])')
+export TERM=xterm-256color
 
-source .functions
-source .aliases
-[ -f .localcfg ] && source .localcfg
+source $HOME/.functions
+source $HOME/.aliases
+[ -f $HOME/.localcfg ] && source $HOME/.localcfg
 
 zle -N zle-line-init
 zle -N zle-keymap-select

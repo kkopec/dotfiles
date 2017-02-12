@@ -1,14 +1,20 @@
-# edition and reload of .zshrc
+# edition and reload of .zshrc/.vimrc
+alias vv="$EDITOR ~/.vimrc"
 alias vz="$EDITOR ~/.zshrc"
 alias rz=". ~/.zshrc"
 
+alias path='echo -e ${PATH//:/\\n}'
 alias repo="cd ~/repo"
 
+alias h='history'
+alias -g G='| grep --color'
+alias v='vim'
+
 # @see .scripts
-alias grepd='~/.scripts/grepd.sh $@'
-alias cdf='. ~/.scripts/cdf.sh "$@"'
+alias grepd='~/.scripts/grepd.sh'
+alias cdf='. ~/.scripts/cdf.sh'
 alias cdfs='. ~/.scripts/cdf.sh ~ "$@"'
-alias uni='python ~/.scripts/uniesc$PYV.py "$@"'
+alias uni='python ~/.scripts/uniesc$PYV.py'
 
 # @see .functions
 alias mkcd=mkcd_func

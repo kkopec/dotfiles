@@ -12,13 +12,10 @@ usage() {
 
 case "$#" in
     2)
-        GOPT=""
         GPAT=$1
         FDIR=$2
-        FINN=""
         ;;
     3)
-        GOPT=""
         GPAT=$1
         FDIR=$2
         FINN=$3

@@ -8,6 +8,7 @@ alias repo="cd ~/repo"
 
 alias h='history'
 alias -g G='| grep --color'
+alias lh='ls -Ad .*'
 alias v='vim'
 
 # @see .scripts

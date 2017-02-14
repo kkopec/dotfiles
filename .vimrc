@@ -2,7 +2,9 @@
 set nocompatible
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
+set colorcolumn=80
 set cursorline
+set hlsearch
 set incsearch
 set joinspaces
 set laststatus=2
@@ -21,11 +23,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'scrooloose/nerdcommenter'
     Plug 'tpope/vim-surround'
+    Plug 'Yggdroot/indentLine'
     Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
- 
+
  "APPEARANCE
     Plug 'itchyny/lightline.vim'
-  "colorschemes
     Plug 'blueshirts/darcula'
 
  "GIT
@@ -39,10 +41,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 call plug#end()
 
+"PLUGINS SETTINGS
+  "vim-javascript
+    let g:javascript_plugin_jsdoc = 1
+
 
 "CUSTOM MAPPINGS
-let mapleader="," " change leader from '\'
 map <F4> :NERDTreeToggle<CR>
+map <F5> :source ~/.vimrc<CR>
+map <F6> :set list!<CR>
 
 
 "APPEARANCE

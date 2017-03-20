@@ -6,7 +6,7 @@ ZSH_THEME="afowler2-custom"
 
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git vi-mode)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -15,6 +15,7 @@ export KEYTIMEOUT=1
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PYV=$(python -c 'import sys; print(sys.version_info[0])')
 export TERM=xterm-256color
+export TERMINAL='urxvt'
 
 source $HOME/.functions
 source $HOME/.aliases

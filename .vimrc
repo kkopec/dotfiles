@@ -50,7 +50,7 @@ call plug#end()
 map <F4> :NERDTreeToggle<CR>
 map <F5> :source ~/.vimrc<CR>
 map <F6> :set list!<CR>
-
+cmap w!! w !sudo tee > /dev/null %
 
 "APPEARANCE
     if !has('gui_running')

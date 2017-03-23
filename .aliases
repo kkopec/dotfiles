@@ -2,6 +2,10 @@
 alias vv="$EDITOR ~/.vimrc"
 alias vz="$EDITOR ~/.zshrc"
 alias rz=". ~/.zshrc"
+alias va="$EDITOR ~/.aliases"
+alias vx="$EDITOR ~/.Xresources"
+alias v3="$EDITOR ~/.config/i3/config"
+alias vp="$EDITOR ~/.config/polybar/config"
 
 alias path='echo -e ${PATH//:/\\n}'
 alias repo="cd ~/repo"

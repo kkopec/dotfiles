@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'Yggdroot/indentLine'
     Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
+    Plug 'chrisbra/Colorizer', { 'on': 'ColorToggle' }
 
  "APPEARANCE
     Plug 'itchyny/lightline.vim'
@@ -50,6 +51,7 @@ call plug#end()
 map <F4> :NERDTreeToggle<CR>
 map <F5> :source ~/.vimrc<CR>
 map <F6> :set list!<CR>
+map <F7> :ColorToggle<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 "APPEARANCE

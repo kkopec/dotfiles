@@ -1,0 +1,5 @@
+xrdb -merge $HOME/.Xresources
+compton -b --config $HOME/.config/compton.conf 
+
+feh --bg-scale $HOME/.wallpapers/forest.png
+

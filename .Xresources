@@ -1,0 +1,69 @@
+! -----------------
+! ROFI Color theme
+! -----------------
+rofi.color-enabled: true
+rofi.color-window: argb:be000000, #000000, argb:3ea9b7c6
+rofi.color-normal: argb:0000000, #a9b7c6, argb:0000000, argb:6d000000, #ffc66d
+rofi.color-active: argb:0000000, #6897bb, argb:0000000, argb:64000000, #6897bb
+rofi.color-urgent: argb:0000000, #ff6b68, argb:0000000, argb:6a000000, #ff6b68
+
+rofi.font: Helvetica 20
+rofi.separator-style: solid
+rofi.lines: 5
+rofi.bw: 0
+rofi.line-margin: 10
+rofi.hide-scrollbar: true
+rofi.padding: 30
+rofi.fake-transparency: true
+
+! -----------------
+! URXVT
+! -----------------
+URxvt.savelines: 16384
+
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0000/ca00
+URxvt.fading: 50
+
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
+URxvt.scrollBar: false
+
+URxvt*font: xft:Hack Regular:size=10
+URxvt*boldFont: xft:Hack Bold:size=10
+
+*foreground: #A9B7C6
+*background: #2B2B2B
+
+! Black + DarkGrey
+*color0:  #000000
+*color8:  #323232
+
+! DarkRed + Red
+*color1:  #ff6b68
+*color9:  #ff6b68
+
+! DarkGreen + Green
+*color2:  #629755
+*color10: #629755
+
+! Darkyellow + Yellow
+*color3:  #ffc66d
+*color11: #ffc66d
+
+! DarkBlue + Blue
+*color4:  #6897bb
+*color12: #6897bb
+
+! DarkMagenta + Magenta 
+*color5:  #9876aa
+*color13: #9876aa
+
+! DarkCyan + Cyan
+*color6:  #8be9fd
+*color14: #9aedfe
+
+! LightGrey + White
+*color7:  #a9b7c6
+*color15: #ffffff
+

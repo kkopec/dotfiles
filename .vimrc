@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Yggdroot/indentLine'
     Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
     Plug 'chrisbra/Colorizer', { 'on': 'ColorToggle' }
+    Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
  "APPEARANCE
     Plug 'itchyny/lightline.vim'
@@ -48,11 +49,14 @@ call plug#end()
 
 
 "CUSTOM MAPPINGS
+let mapleader=","
 map <F4> :NERDTreeToggle<CR>
 map <F5> :source ~/.vimrc<CR>
 map <F6> :set list!<CR>
 map <F7> :ColorToggle<CR>
 cmap w!! w !sudo tee > /dev/null %
+nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
+nnoremap <leader>u :GundoToggle<CR>
 
 "APPEARANCE
     if !has('gui_running')

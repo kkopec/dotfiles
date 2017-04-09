@@ -50,13 +50,17 @@ call plug#end()
 
 "CUSTOM MAPPINGS
 let mapleader=","
+
 map <F4> :NERDTreeToggle<CR>
 map <F5> :source ~/.vimrc<CR>
-map <F6> :set list!<CR>
-map <F7> :ColorToggle<CR>
+map <F9> :ColorToggle<CR>
+
 cmap w!! w !sudo tee > /dev/null %
+
 nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
 nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>n :set relativenumber!<CR>
+nnoremap <leader>l :set list!<CR>
 
 "APPEARANCE
     if !has('gui_running')

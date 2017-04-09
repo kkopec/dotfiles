@@ -31,6 +31,10 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+# start a terminal in current directory
+bindsym $mod+Shift+Return exec i3-sensible-terminal -cd $($HOME/.scripts/xwcwd.sh) -hold
+# run file maneger in current directory
+bindsym $mod+Shift+P exec pcmanfm $($HOME/.scripts/xwcwd.sh)
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -173,13 +177,13 @@ client.focused          #21464c #21464c #a9b7c6 #a9b7c6
 #client.urgent           #000000 #000000 #000000 #000000
 
 
+for_window [class="Subl3"] border pixel 2
 for_window [class="Chromium"] border pixel 2
-for_window [class="Evince"] border normal
-#for_window [class="Evince"] border pixel 2
 for_window [class="Firefox"] border pixel 2
 for_window [class="Pcmanfm"] border pixel 2
-for_window [class="Subl3"] border pixel 2
 for_window [class="Vlc"] border pixel 2
+#for_window [class="Evince"] border pixel 2
+for_window [class="Evince"] border normal
 
 # terminal in scratchpad
 for_window [instance="scratch"] move to scratchpad

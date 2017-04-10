@@ -11,8 +11,8 @@ usage() {
     echo ""
 }
 
-[ $# -eq 0 ] && (usage && return 1)
-OUTER_DIR=$(find . -mindepth 1 -maxdepth 1 -type d -name "*$1*" -print -quit) || (usage && return 1)
-INNER_DIR=$(find $OUTER_DIR -type d -name "*$2*" -print -quit) || (usage && return 1)
+[ $# -eq 0 ] && usage && return 1
+OUTER_DIR=$(find . -mindepth 1 -maxdepth 1 -type d -name "*$1*" -print -quit) || return 1
+INNER_DIR=$(find $OUTER_DIR -type d -name "*$2*" -print -quit) || return 1
 cd $INNER_DIR
 

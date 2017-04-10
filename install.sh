@@ -87,6 +87,8 @@ function link_core() {
     ln -sf $DOTDIR/.vimrc       $HOME
     ln -sf $DOTDIR/.zshrc       $HOME
     ln -sf $DOTDIR/$theme_dir/* $HOME/$theme_dir
+
+    ln -sf $DOTDIR/.localcfg    $HOME
 }
 
 function link_xfiles() {

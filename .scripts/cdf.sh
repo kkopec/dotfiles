@@ -1,11 +1,18 @@
 #!/bin/bash
 
+SCRIPT_NAME="${(%):-%N}"
 usage() {
-    echo -e "\nchange directory - changes cwd to a directory located within another directory"
-    echo    "Usage: $(basename "$0") <fd> <fid>"
-    echo    "Params: <fd>  - find directory"
-    echo -e "        <fid> - find inner directory\n"
-    exit 1
+    echo ""
+    echo "change directory - changes cwd to a directory located within another directory"
+    echo "Usage: $(basename $SCRIPT_NAME) <fd> [fi]"
+    echo "Params:" 
+    echo "  <fd>    find top level directory"
+    echo "  [fi]    find inner directory"
+    echo ""
 }
 
-cd $(find $1 -type d -name "*$2*" -print -quit) || usage
+[ $# -eq 0 ] && (usage && return 1)
+OUTER_DIR=$(find . -mindepth 1 -maxdepth 1 -type d -name "*$1*" -print -quit) || (usage && return 1)
+INNER_DIR=$(find $OUTER_DIR -type d -name "*$2*" -print -quit) || (usage && return 1)
+cd $INNER_DIR
+

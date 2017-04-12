@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
 """
-Script that escapes unicode characters passed as arguments to \uXXXX format
+Escapes unicode characters passed as arguments to \\uXXXX format
 """
 import sys
 

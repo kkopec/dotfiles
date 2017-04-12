@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 usage() {
-    echo ""
     echo "grep directory - looks for a pattern within a directory"
     echo ""
     echo "Usage: $(basename "$0") [go] <gp> <fd> [fi]"
-    echo "Params:"
+    echo "Options:"
     echo "   -go,    --grep-options  grep search options"
     echo "   -gp,    --grep-pattern  grep search pattern"
     echo "   -fd,    --find-dir      find outer directory"
@@ -48,6 +47,6 @@ find $ODIR \
     -mindepth 1 -type d \
     ! -path "*.git/*" ! -path "*node_modules/*" \
     -name "*$FIND_INNER*" \
-    -exec unbuffer grep --color -Irn $GREP_OPT $GREP_PATT {} \; \
+    -exec grep --color=always -Irn $GREP_OPT $GREP_PATT {} \; \
     | sort -n | uniq  || usage
 

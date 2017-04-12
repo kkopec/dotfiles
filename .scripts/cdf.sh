@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCRIPT_NAME="${(%):-%N}"
 usage() {
-    echo ""
     echo "change directory - changes cwd to a directory located within another directory"
+    echo ""
     echo "Usage: $(basename $SCRIPT_NAME) <fd> [fi]"
-    echo "Params:" 
+    echo "Options:" 
     echo "  <fd>    find top level directory"
     echo "  [fi]    find inner directory"
     echo ""

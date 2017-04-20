@@ -54,7 +54,7 @@ font-1 = FontAwesome:pixelsize=12;2
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = xbacklight volume filesystem xkeyboard wlan eth memory cpu temperature battery date 
+modules-right = xautolock-status xbacklight volume filesystem xkeyboard wlan eth memory cpu temperature battery date
 
 tray-position = right
 tray-padding = 2
@@ -325,6 +325,14 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/xautolock-status]
+type = custom/script
+exec = echo 1
+exec-if = $HOME/.config/polybar/xautolock-status.sh
+interval = 5
+label = 
+label-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true

@@ -9,6 +9,7 @@ alias vp="$EDITOR ~/.config/polybar/config"
 
 alias path='echo -e ${PATH//:/\\n}'
 alias repo="cd ~/repo"
+alias dot="cd ~/repo/dotfiles"
 
 alias cal='cal -m --color=auto'
 alias h='history'
@@ -22,9 +23,8 @@ alias transe='trans en:pl'
 alias words='cat /usr/share/dict/words | grep -E $@'
 
 # @see .scripts
-alias grepd='~/.scripts/grepd.sh'
 alias cdf='. ~/.scripts/cdf.sh'
-alias cdfs='. ~/.scripts/cdf.sh ~ "$@"'
+alias grepd='~/.scripts/grepd.sh'
 alias uni='python ~/.scripts/uniesc$PYV.py'
 
 # @see .functions

@@ -82,13 +82,14 @@ function link_core() {
     theme_dir=".oh-my-zsh/custom/themes"
 
     ln -sf $DOTDIR/.aliases     $HOME
+    ln -sf $DOTDIR/.env         $HOME
     ln -sf $DOTDIR/.functions   $HOME
     ln -sf $DOTDIR/.scripts     $HOME
     ln -sf $DOTDIR/.vimrc       $HOME
     ln -sf $DOTDIR/.zshrc       $HOME
     ln -sf $DOTDIR/$theme_dir/* $HOME/$theme_dir
 
-    ln -sf $DOTDIR/.localcfg    $HOME
+    [ -f $DOTDIR/.localcfg ] && ln -sf $DOTDIR/.localcfg $HOME
 }
 
 function link_xfiles() {

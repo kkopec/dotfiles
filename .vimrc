@@ -14,6 +14,8 @@ set nobackup nowritebackup noswapfile
 set number
 set showcmd
 set showmatch
+set splitbelow
+set splitright
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set ww+=<,> "moving through line breaks
 
@@ -26,7 +28,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'Yggdroot/indentLine'
     Plug 'guns/xterm-color-table.vim', { 'on': 'XtermColorTable' }
     Plug 'chrisbra/Colorizer', { 'on': 'ColorToggle' }
-    Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
  "APPEARANCE
     Plug 'itchyny/lightline.vim'
@@ -58,9 +59,12 @@ map <F9> :ColorToggle<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
-nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>n :set relativenumber!<CR>
 nnoremap <leader>l :set list!<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "APPEARANCE
     if !has('gui_running')

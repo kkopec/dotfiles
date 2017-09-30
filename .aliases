@@ -1,26 +1,44 @@
-# edition and reload of .zshrc/.vimrc
+# dotfiles manipulation
+alias rz="source ~/.zshrc"
 alias vv="$EDITOR ~/.vimrc"
 alias vz="$EDITOR ~/.zshrc"
-alias rz=". ~/.zshrc"
 alias va="$EDITOR ~/.aliases"
 alias vx="$EDITOR ~/.Xresources"
 alias v3="$EDITOR ~/.config/i3/config"
 alias vp="$EDITOR ~/.config/polybar/config"
+alias ve="$EDITOR ~/.env"
+alias vl="$EDITOR ~/.localcfg"
 
-alias path='echo -e ${PATH//:/\\n}'
+# dirs
 alias repo="cd ~/repo"
 alias dot="cd ~/repo/dotfiles"
 
-alias cal='cal -m --color=auto'
-alias h='history'
+# pipe
+alias -g C='| clipcopy'
 alias -g G='| grep --color'
 alias -g L='| less' 
+alias -g J='| python -m json.tool'
+alias -g json='| python -m json.tool'
+
+# random
+alias path='echo -e ${PATH//:/\\n}'
+alias cal='cal -m --color=auto'
+alias h='history'
 alias lh='ls -Ad .*'
 alias v='vim'
 
 alias transp='trans pl:en'
 alias transe='trans en:pl'
+alias tp='trans pl:en -b "$@"'
+alias te='trans en:pl -b "$@"'
 alias words='cat /usr/share/dict/words | grep -E $@'
+
+# npm
+alias lint='npm run lint'
+alias nl='npm run lint'
+alias ni='npm install'
+alias ns='npm start'
+alias nr='rm -rf node_modules && rm package-lock.json'
 
 # @see .scripts
 alias cdf='. ~/.scripts/cdf.sh'
@@ -30,5 +48,5 @@ alias uni='python ~/.scripts/uniesc$PYV.py'
 # @see .functions
 alias mkcd=mkcd_func
 alias cds=cdls
-
 alias otw=overthewire
+

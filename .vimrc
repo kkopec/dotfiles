@@ -42,6 +42,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'python-mode/python-mode', { 'for': 'python' }
   "Javascript
     Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  "Typescript
+    Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 call plug#end()
 
 "PLUGINS SETTINGS

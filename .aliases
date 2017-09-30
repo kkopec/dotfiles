@@ -29,8 +29,6 @@ alias v='vim'
 
 alias transp='trans pl:en'
 alias transe='trans en:pl'
-alias tp='trans pl:en -b "$@"'
-alias te='trans en:pl -b "$@"'
 alias words='cat /usr/share/dict/words | grep -E $@'
 
 # npm
@@ -44,6 +42,8 @@ alias nr='rm -rf node_modules && rm package-lock.json'
 alias cdf='. ~/.scripts/cdf.sh'
 alias grepd='~/.scripts/grepd.sh'
 alias uni='python ~/.scripts/uniesc$PYV.py'
+alias te='~/.scripts/translate.sh en:pl -b "$@"'
+alias tp='~/.scripts/translate.sh pl:en -b "$@"'
 
 # @see .functions
 alias mkcd=mkcd_func

@@ -44,6 +44,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   "Typescript
     Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+  "Rust
+    Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 call plug#end()
 
 "PLUGINS SETTINGS

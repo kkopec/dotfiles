@@ -1,37 +1,34 @@
 # dotfiles manipulation
 alias rz="source ~/.zshrc"
-alias vv="$EDITOR ~/.vimrc"
 alias vz="$EDITOR ~/.zshrc"
+alias vv="$EDITOR ~/.vimrc"
 alias va="$EDITOR ~/.aliases"
+alias ve="$EDITOR ~/.env"
+alias vl="$EDITOR ~/.localcfg"
 alias vx="$EDITOR ~/.Xresources"
 alias v3="$EDITOR ~/.config/i3/config"
 alias vp="$EDITOR ~/.config/polybar/config"
-alias ve="$EDITOR ~/.env"
-alias vl="$EDITOR ~/.localcfg"
+
+# misc
+alias v='vim'
+alias h='history'
+alias path='echo -e ${PATH//:/\\n}'
+alias cal='cal -m --color=auto'
+alias lh='ls -Ad .*'
+alias ipe='curl ipinfo.io/ip'
+alias ips='ip addr | grep -P "inet(?!6).+(?<!lo|docker.)$" | cut -d" " -f6,13'
 
 # dirs
 alias repo="cd ~/repo"
 alias dot="cd ~/repo/dotfiles"
+alias work="cd ~/repo/work"
 
-# pipe
+# pipes
 alias -g C='| clipcopy'
 alias -g G='| grep --color'
 alias -g L='| less' 
 alias -g J='| python -m json.tool'
 alias -g json='| python -m json.tool'
-
-# random
-alias path='echo -e ${PATH//:/\\n}'
-alias cal='cal -m --color=auto'
-alias h='history'
-alias lh='ls -Ad .*'
-alias v='vim'
-
-alias yt='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --add-metadata --metadata-from-title "%(artist)s - %(title)s" "$@"'
-
-alias transp='trans pl:en'
-alias transe='trans en:pl'
-alias words='cat /usr/share/dict/words | grep -E $@'
 
 # npm
 alias ni='npm install'
@@ -39,6 +36,12 @@ alias nci='npm ci'
 alias ns='npm start'
 alias nr='rm -rf node_modules'
 alias nl='npm run lint'
+
+# random
+alias transp='trans pl:en'
+alias transe='trans en:pl'
+alias words='cat /usr/share/dict/words | grep -E $@'
+alias yt='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --add-metadata --metadata-from-title "%(artist)s - %(title)s" "$@"'
 
 # vpn
 alias nvp='nordvpn connect Poland'

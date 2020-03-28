@@ -28,6 +28,7 @@ URxvt.fading: 50
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 URxvt.scrollBar: false
+URxvt.letterSpace: -1
 
 URxvt*font: xft:Hack Regular:size=10
 URxvt*boldFont: xft:Hack Bold:size=10

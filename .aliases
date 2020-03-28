@@ -27,16 +27,22 @@ alias h='history'
 alias lh='ls -Ad .*'
 alias v='vim'
 
+alias yt='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --add-metadata --metadata-from-title "%(artist)s - %(title)s" "$@"'
+
 alias transp='trans pl:en'
 alias transe='trans en:pl'
 alias words='cat /usr/share/dict/words | grep -E $@'
 
 # npm
-alias lint='npm run lint'
-alias nl='npm run lint'
 alias ni='npm install'
+alias nci='npm ci'
 alias ns='npm start'
-alias nr='rm -rf node_modules && rm package-lock.json'
+alias nr='rm -rf node_modules'
+alias nl='npm run lint'
+
+# vpn
+alias nvp='nordvpn connect Poland'
+alias nvd='nordvpn d'
 
 # @see .scripts
 alias cdf='. ~/.scripts/cdf.sh'

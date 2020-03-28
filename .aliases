@@ -17,6 +17,7 @@ alias cal='cal -m --color=auto'
 alias lh='ls -Ad .*'
 alias ipe='curl ipinfo.io/ip'
 alias ips='ip addr | grep -P "inet(?!6).+(?<!lo|docker.)$" | cut -d" " -f6,13'
+alias serve='python -m http.server "$@"'
 
 # dirs
 alias repo="cd ~/repo"
